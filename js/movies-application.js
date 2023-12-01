@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-	const loadingMessage = document.getElementById('loading-message');
-	const moviesContainer = document.getElementById('movies-container');
+	const loadingMessage = document.querySelector('#loading-message');
+	const moviesContainer = document.querySelector('#movies-container');
 
 	// Fetch movies data and display
 	fetch('http://localhost:3000/movies')
