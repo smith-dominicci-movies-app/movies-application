@@ -157,16 +157,26 @@ body {
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    text-align: center;
 }
 .options-button {
     margin-top: 2px;
 }
+.options-content a {
+    display: block;
+    padding: 10px; /* Add padding for better spacing */
+    text-decoration: none;
+    color: #555;
+}
 .options-content a:hover {
-    background-color: #808080FF;
+    background-color: #808080; /* Change the color when hovering */
+    border-radius: 4px; /* Add rounded corners */
+    color: #fff; /* Change text color on hover */
 }
 .options-divider {
     height: 1px;
     background-color: #ccc;
+    margin: 10px 0; /* Adjust the margin */
 }
 .options-dropdown {
     position: relative;
