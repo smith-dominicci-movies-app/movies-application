@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Port+Lligat+Sans&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
@@ -46,17 +47,40 @@ nav {
 
 /* Rest of your CSS */
 
+
+* {
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+}
+
+#movies-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
 /* Movie Card Styles */
 .movie-card {
     font-family: 'Poppins', sans-serif;
     border: 1px solid #ddd;
     border-radius: 8px;
     margin: 15px;
-    padding: 25px 20px;
+    padding: 25px 25px 5px;
     width: 330px;
     height: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+}
+
+.rating-split {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Card Header Styles */
@@ -69,13 +93,14 @@ nav {
 }
 
 .card-title {
-    font-weight:  500;
-    font-size: 18px;
+
+    font-weight:  500; /*Medium 500*/
+    font-size: 20px;
 }
 
 .card-year {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 400; /*Regular 400*/
     color: #595F69;
 }
 
@@ -84,26 +109,29 @@ nav {
     font-family: 'Port Lligat Sans', sans-serif;
     font-weight: 400;
     color: #595F69;
-    margin: 10px;
+    margin-bottom: 30px;
+    height: 52px;
+    overflow: hidden;
+
 }
 
 /* Rating Bar Styles */
 .rating-bar {
     position: relative;
-    height: 10px;
+    height: 5px;
     background-color: #ddd;
     border-radius: 10px;
     overflow: hidden;
-    margin-top: 8px;
-}
+    margin-top: 5px;
+    margin-bottom: 5px;
+    & label {
+    }
+    .rating-value {
+        height: 100%;
+        background-color: #4caf50;
+        border-radius: 10px;
+    }
 
-.rating-bar label {
-}
-
-.rating-bar .rating-value {
-    height: 100%;
-    background-color: #4caf50;
-    border-radius: 10px;
 }
 
 /* Card Footer Styles */
@@ -112,9 +140,11 @@ nav {
     color: #555;
 }
 
+
 .card-footer label {
     margin-right: 10px;
 }
+
 
 .card-genres {
     font-size: 14px;
@@ -122,13 +152,19 @@ nav {
     background-color: #F8F8F8;
     border: none;
     color: black;
-    padding: 3px 38px;
+
+    padding: 3px 35px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 15px 0; /* Adjusted margin */
+    margin: 10px 5px;
     border-radius: 6px;
 }
+.card-genres-container {
+    display: flex;
+    gap: 5px; /* Adjust the gap between the two pill boxes */
+}
+
 
 /* Options Button Styles */
 .options-button {
@@ -179,8 +215,10 @@ nav {
     position: absolute;
     min-height: 123px;
     min-width: 224px;
-    left: -195px;
-    top: 45px;
+
+    left: -195px; /* Adjust this value as needed */
+    top: 45px; /* Position it below the button */
+
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -188,10 +226,12 @@ nav {
     z-index: 1;
 }
 
-.options-button {
-    margin-top: -10px;
-}
 
+
+
+.options-button {
+    margin-top: 2px;
+}
 .options-content a:hover {
     background-color: #808080FF;
 }
@@ -201,6 +241,7 @@ nav {
     background-color: #ccc;
     margin: 5px 0;
 }
+
 
 .options-dropdown {
     position: relative;
@@ -263,3 +304,14 @@ nav {
 #search-bar {
     border-radius: 5px; /* Adjust the border-radius as needed */
 }
+
+.options-dropdown {
+    position: relative;
+}
+.options-button.active {
+    background-color: grey; /* Adjust the background color for the active state */
+}
+.options-button.active + .options-content {
+    display: block;
+}
+

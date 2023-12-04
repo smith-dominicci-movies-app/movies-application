@@ -2,66 +2,75 @@
   "movies": [
     {
       "id": 1,
-      "title": "Dune",
-      "genre": "Science Fiction",
-      "releaseYear": 2021,
-      "summary": "A young nobleman named Paul Atreides leads the most important and dangerous assignment in the universe."
+      "title": "Inception",
+      "rating": 9,
+      "genres": ["Sci-Fi", "Thriller"],
+      "description": "A skilled thief enters the dreams of others to steal their deepest secrets.",
+      "year": 2010
     },
     {
       "id": 2,
-      "title": "No Time to Die",
-      "genre": "Action",
-      "releaseYear": 2021,
-      "summary": "James Bond has left active service. His peace is short-lived when Felix Leiter, an old friend, turns up asking for help."
+      "title": "The Shawshank Redemption",
+      "rating": 10,
+      "genres": ["Drama", "Crime"],
+      "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+      "year": 1994
     },
     {
       "id": 3,
-      "title": "Spider-Man: No Way Home",
-      "genre": "Action",
-      "releaseYear": 2021,
-      "summary": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help, but it causes a multiverse madness."
+      "title": "The Dark Knight",
+      "rating": 9.6,
+      "genres": ["Action", "Drama"],
+      "description": "Batman, with the help of his allies and Gotham's police, tries to rid the city of crime.",
+      "year": 2008
     },
     {
       "id": 4,
-      "title": "The Matrix Resurrections",
-      "genre": "Science Fiction",
-      "releaseYear": 2021,
-      "summary": "Return to a world of two realities: one, everyday life; the other, what lies behind it."
+      "title": "Forrest Gump",
+      "rating": 9.4,
+      "genres": ["Drama", "Romance"],
+      "description": "The story depicts several decades in the life of Forrest Gump, a slow-witted but kind-hearted and athletically-talented man.",
+      "year": 1994
     },
     {
       "id": 5,
-      "title": "The French Dispatch",
-      "genre": "Comedy",
-      "releaseYear": 2021,
-      "summary": "A love letter to journalists set in an outpost of an American newspaper in a fictional 20th-century French city."
+      "title": "Pulp Fiction",
+      "rating": 9.2,
+      "genres": ["Crime", "Comedy"],
+      "description": "Various interconnected stories of crime and redemption in Los Angeles.",
+      "year": 1994
     },
     {
       "id": 6,
-      "title": "The Green Knight",
-      "genre": "Fantasy",
-      "releaseYear": 2021,
-      "summary": "A fantasy re-telling of the medieval story of Sir Gawain and the Green Knight."
+      "title": "The Matrix",
+      "rating": 9.8,
+      "genres": ["Sci-Fi", "Action"],
+      "description": "A computer hacker learns about the true nature of his reality and his role in the war against its controllers.",
+      "year": 1999
     },
     {
       "id": 7,
-      "title": "Cruella",
-      "genre": "Crime",
-      "releaseYear": 2021,
-      "summary": "Estella is a young and clever grifter who's determined to make a name for herself in the fashion world."
+      "title": "Titanic",
+      "rating": 8.8,
+      "genres": ["Romance", "Drama"],
+      "description": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+      "year": 1997
     },
     {
       "id": 8,
-      "title": "Shang-Chi and the Legend of the Ten Rings",
-      "genre": "Action",
-      "releaseYear": 2021,
-      "summary": "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization."
+      "title": "The Godfather",
+      "rating": 9.6,
+      "genres": ["Crime", "Thriller"],
+      "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+      "year": 1972
     },
     {
       "id": 9,
-      "title": "Luca",
-      "genre": "Animation",
-      "releaseYear": 2021,
-      "summary": "On the Italian Riviera, an unlikely but strong friendship grows between a human being and a sea monster disguised as a human."
-    }
+      "title": "Jurassic Park",
+      "rating": 9,
+      "genres": ["Adventure", "Sci-Fi"],
+      "description": "A pragmatic paleontologist visiting an almost complete theme park is tasked with protecting a couple of kids after a power failure causes the park's cloned dinosaurs to run loose.",
+      "year": 1993
+    },
   ]
 }
