@@ -123,15 +123,26 @@ const fetchMovies = () => {
 		.catch(error => console.error('Error fetching movies:', error));
 };
 
-const showEditPopup = (movieId) => {
+const showEditPopup = async (movieId) => {
 	const editPopup = document.getElementById('edit-popup');
-	const movie = `${movie.id}`;
 
-		// Pre-fill input fields
-		document.getElementById('edit-title').value = movie.title;
-	// Add similar lines for other movie properties
+	// Fetch the movie details using the movieId
+	try {
+		const response = await fetch(`http://localhost:3000/movies/${movieId}`);
+		if (response.ok) {
+			const movie = await response.json();
 
-	editPopup.style.display = 'block';
+			// Pre-fill input fields
+			document.getElementById('edit-title').value = movie.title;
+			// Add similar lines for other movie properties
+
+			editPopup.style.display = 'block';
+		} else {
+			console.error('Failed to fetch movie details:', response.status);
+		}
+	} catch (error) {
+		console.error('Error fetching movie details:', error);
+	}
 };
 
 function closeEditPopup() {
