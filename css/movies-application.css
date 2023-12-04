@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Port+Lligat+Sans&display=swap');
+* {
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+}
+
+#movies-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+/* Movie Card Styles */
+.movie-card {
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 15px;
+    padding: 25px 20px;
+    width: 330px;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Card Header Styles */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-weight:  500; /*Medium 500*/
+    font-size: 18px;
+}
+
+.card-year {
+    font-size: 14px;
+    font-weight: 400; /*Regular 400*/
+    color: #595F69;
+}
+
+/* Card Body Styles */
+.card-body {
+    font-family: 'Port Lligat Sans', sans-serif;
+    font-weight: 400;
+    color: #595F69;
+    margin: 10px;
+}
+
+/* Rating Bar Styles */
+.rating-bar {
+    position: relative;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 8px;
+    & label {
+    }
+    .rating-value {
+        height: 100%;
+        background-color: #4caf50;
+        border-radius: 10px;
+    }
+}
+
+/* Card Footer Styles */
+.card-footer {
+
+    font-size: 14px;
+    color: #555;
+}
+.card-footer label {
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+.card-genres {
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #F8F8F8;
+    border: none;
+    color: black;
+    padding: 3px 38px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 15px 106px;
+    border-radius: 6px;
+}
+
+/* Options Button Styles */
+.options-button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #8A9099;
+}
+.right-aligned {
+    right: 0;
+    left: auto;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    z-index: 1;
+    padding: 20px;
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.options-dropdown {
+    position: relative;
+    display: inline-block;
+}
+.options-content {
+    display: none;
+    position: absolute;
+    min-height: 123px;
+    min-width: 224px;
+    left: -195px; /* Adjust this value as needed */
+    top: 45px; /* Position it below the button */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+.options-button {
+    margin-top: -10px;
+}
+.options-content a:hover {
+    background-color: #808080FF;
+}
+.options-divider {
+    height: 1px;
+    background-color: #ccc;
+    margin: 5px 0;
+}
+.options-dropdown {
+    position: relative;
+}
+.options-button.active {
+    background-color: grey; /* Adjust the background color for the active state */
+}
+.options-button.active + .options-content {
+    display: block;
+}

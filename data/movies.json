@@ -2,8 +2,75 @@
   "movies": [
     {
       "id": 1,
-      "title": "Shrek",
-      "rating": 5
+      "title": "Inception",
+      "rating": 9,
+      "genre": "Sci-Fi",
+      "description": "A skilled thief enters the dreams of others to steal their deepest secrets.",
+      "year": 2010
+    },
+    {
+      "id": 2,
+      "title": "The Shawshank Redemption",
+      "rating": 10,
+      "genre": "Drama",
+      "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+      "year": 1994
+    },
+    {
+      "id": 3,
+      "title": "The Dark Knight",
+      "rating": 9.6,
+      "genre": "Action",
+      "description": "Batman, with the help of his allies and Gotham's police, tries to rid the city of crime.",
+      "year": 2008
+    },
+    {
+      "id": 4,
+      "title": "Forrest Gump",
+      "rating": 9.4,
+      "genre": "Drama",
+      "description": "The story depicts several decades in the life of Forrest Gump, a slow-witted but kind-hearted and athletically-talented man.",
+      "year": 1994
+    },
+    {
+      "id": 5,
+      "title": "Pulp Fiction",
+      "rating": 9.2,
+      "genre": "Crime",
+      "description": "Various interconnected stories of crime and redemption in Los Angeles.",
+      "year": 1994
+    },
+    {
+      "id": 6,
+      "title": "The Matrix",
+      "rating": 9.8,
+      "genre": "Sci-Fi",
+      "description": "A computer hacker learns about the true nature of his reality and his role in the war against its controllers.",
+      "year": 1999
+    },
+    {
+      "id": 7,
+      "title": "Titanic",
+      "rating": 8.8,
+      "genre": "Romance",
+      "description": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+      "year": 1997
+    },
+    {
+      "id": 8,
+      "title": "The Godfather",
+      "rating": 9.6,
+      "genre": "Crime",
+      "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+      "year": 1972
+    },
+    {
+      "id": 9,
+      "title": "Jurassic Park",
+      "rating": 9,
+      "genre": "Adventure",
+      "description": "A pragmatic paleontologist visiting an almost complete theme park is tasked with protecting a couple of kids after a power failure causes the park's cloned dinosaurs to run loose.",
+      "year": 1993
     }
   ]
 }
