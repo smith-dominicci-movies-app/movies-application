@@ -44,6 +44,7 @@ const createMovieCard = (movie) => {
 	body.classList.add('card-body');
 
 	const description = document.createElement('div');
+	description.classList.add("desc");
 	description.textContent = movie.description;
 
 	body.appendChild(description);
@@ -52,19 +53,29 @@ const createMovieCard = (movie) => {
 	// Footer: Genres
 	const footer = document.createElement('div');
 	footer.classList.add('card-footer');
-	footer.innerHTML = `<label>Rating</label>  <label>${movie.rating}/10</label>`
+	footer.innerHTML = `
+		<div class="rating-split">
+			<label>Rating</label>
+			<label>${movie.rating}/10</label>
+		</div>
+	`;
 
+	const genresContainer = document.createElement('div');
+	genresContainer.classList.add('card-genres-container');
+
+	movie.genres.forEach(genre => {
+		const genreBox = document.createElement('div');
+		genreBox.classList.add('card-genres');
+		genreBox.textContent = genre;
+		genresContainer.appendChild(genreBox);
+	});
 
 	const ratingBar = document.createElement('div');
 	ratingBar.classList.add('rating-bar');
 	ratingBar.innerHTML = `<div class="rating-value" style="width: ${(movie.rating / 10) * 100}%;"></div>`;
 
-	const genres = document.createElement('div');
-	genres.classList.add('card-genres');
-	genres.textContent = `${movie.genre}`;
-
 	footer.appendChild(ratingBar);
-	footer.appendChild(genres);
+	footer.appendChild(genresContainer);
 
 	// Append everything to the card
 	card.appendChild(header);
@@ -126,7 +137,7 @@ const showEditPopup = (movieId) => {
 function closeEditPopup() {
 	const editPopup = document.getElementById('edit-popup');
 	editPopup.style.display = 'none';
-};
+}
 
 const updateMovie = async () => {
 	const editPopup = document.getElementById('edit-popup');
