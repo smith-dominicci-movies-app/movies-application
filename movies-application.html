@@ -8,7 +8,7 @@
 </head>
 <body>
 <header>
-    <h1>Movies App</h1>
+    <h1 style="color: #4caf50;">Movies App</h1>
     <nav>
         <button id="all-movies-btn" class="genre-button" onclick="filterByGenre('All')">All</button>
         <button id="action-btn" class="genre-button" onclick="filterByGenre('Action')">Action</button>
@@ -17,13 +17,16 @@
         <button id="drama-btn" class="genre-button" onclick="filterByGenre('Drama')">Drama</button>
         <button id="sci-fi-btn" class="genre-button" onclick="filterByGenre('Sci-Fi')">Sci-Fi</button>
         <button id="romance-btn" class="genre-button" onclick="filterByGenre('Romance')">Romance</button>
-        <!-- Add Search Bar -->
-        <input type="text" id="search-bar" placeholder="Search...">
-        <!-- Add Filter Button -->
-        <button id="filter-btn" class="genre-button" onclick="applyFilter()">Filter</button>
-        <!-- Add Movie Button -->
-        <button id="add-movie-btn" class="genre-button" style="background-color: #4caf50;" onclick="openAddMoviePopup()">+ Add Movie</button>
     </nav>
+    <!-- Update the search container -->
+    <div class="search-container">
+        <button class="search-icon">&#128269;</button>
+        <input type="text" id="search-bar" placeholder="Search...">
+        <button class="filter-button" onclick="filterMovies()"><img src="img/filter.png" alt="Filter Icon"></button>
+        <button class="add-movie-button" onclick="openAddMoviePopup()">+ Add Movie</button>
+    </div>
+
+
 </header>
 
 <div id="loading-message">Loading...</div>

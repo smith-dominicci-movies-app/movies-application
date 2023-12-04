@@ -227,3 +227,60 @@ nav {
 .options-button.active + .options-content {
     display: block;
 }
+
+/* Update the styles to position the search icon before the search bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.search-icon {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+#search-bar {
+    flex: 1;
+    padding: 8px;
+}
+
+.filter-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.filter-button img {
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+}
+
+.add-movie-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.search-icon,
+.filter-button,
+.add-movie-button,
+.genre-button {
+    border-radius: 5px; /* Adjust the border-radius as needed */
+}
+
+/* Add this for the search bar input */
+#search-bar {
+    border-radius: 5px; /* Adjust the border-radius as needed */
+}
+
+
+
+
