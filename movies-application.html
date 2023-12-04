@@ -8,6 +8,23 @@
 
 </head>
 <body>
+<header>
+	<h1 style="color: #4caf50;">Movies App</h1>
+	<nav>
+		<button id="all-movies-btn" class="genre-button" onclick="filterByGenre('All')">All</button>
+		<button id="action-btn" class="genre-button" onclick="filterByGenre('Action')">Action</button>
+		<button id="adventure-btn" class="genre-button" onclick="filterByGenre('Adventure')">Adventure</button>
+		<button id="crime-btn" class="genre-button" onclick="filterByGenre('Crime')">Crime</button>
+		<button id="drama-btn" class="genre-button" onclick="filterByGenre('Drama')">Drama</button>
+		<button id="sci-fi-btn" class="genre-button" onclick="filterByGenre('Sci-Fi')">Sci-Fi</button>
+		<button id="romance-btn" class="genre-button" onclick="filterByGenre('Romance')">Romance</button>
+	</nav>
+	<div class="search-container">
+		<input type="text" id="search-bar" placeholder="Search...">
+		<button class="search-icon">&#128269;</button>
+	</div>
+</header>
+
 <div id="loading-message">Loading...</div>
 <div id="movies-container"></div>
 <div id="edit-popup" class="popup">
@@ -19,7 +36,17 @@
 		<!-- Add similar input fields for other movie properties -->
 		<button onclick="updateMovie()">Update</button>
 	</div>
+
+	<div class="search-container">
+		<button class="search-icon">&#128269;</button>
+		<input type="text" id="search-bar" placeholder="Search...">
+		<button class="filter-button" onclick="filterMovies()"><img src="img/filter.png" alt="Filter Icon"></button>
+		<button class="add-movie-button" onclick="openAddMoviePopup()">+ Add Movie</button>
+	</div>
 </div>
+
+
 <script src="./js/movies-application.js"></script>
+
 </body>
 </html>
