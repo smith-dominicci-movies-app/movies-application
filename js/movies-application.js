@@ -177,7 +177,3 @@ document.addEventListener('click', () => {
 		fetchMovies();
 	});
 })();
-
-
-
-
