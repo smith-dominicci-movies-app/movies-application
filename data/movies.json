@@ -2,8 +2,66 @@
   "movies": [
     {
       "id": 1,
-      "title": "Shrek",
-      "rating": 5
+      "title": "Dune",
+      "genre": "Science Fiction",
+      "releaseYear": 2021,
+      "summary": "A young nobleman named Paul Atreides leads the most important and dangerous assignment in the universe."
+    },
+    {
+      "id": 2,
+      "title": "No Time to Die",
+      "genre": "Action",
+      "releaseYear": 2021,
+      "summary": "James Bond has left active service. His peace is short-lived when Felix Leiter, an old friend, turns up asking for help."
+    },
+    {
+      "id": 3,
+      "title": "Spider-Man: No Way Home",
+      "genre": "Action",
+      "releaseYear": 2021,
+      "summary": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help, but it causes a multiverse madness."
+    },
+    {
+      "id": 4,
+      "title": "The Matrix Resurrections",
+      "genre": "Science Fiction",
+      "releaseYear": 2021,
+      "summary": "Return to a world of two realities: one, everyday life; the other, what lies behind it."
+    },
+    {
+      "id": 5,
+      "title": "The French Dispatch",
+      "genre": "Comedy",
+      "releaseYear": 2021,
+      "summary": "A love letter to journalists set in an outpost of an American newspaper in a fictional 20th-century French city."
+    },
+    {
+      "id": 6,
+      "title": "The Green Knight",
+      "genre": "Fantasy",
+      "releaseYear": 2021,
+      "summary": "A fantasy re-telling of the medieval story of Sir Gawain and the Green Knight."
+    },
+    {
+      "id": 7,
+      "title": "Cruella",
+      "genre": "Crime",
+      "releaseYear": 2021,
+      "summary": "Estella is a young and clever grifter who's determined to make a name for herself in the fashion world."
+    },
+    {
+      "id": 8,
+      "title": "Shang-Chi and the Legend of the Ten Rings",
+      "genre": "Action",
+      "releaseYear": 2021,
+      "summary": "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization."
+    },
+    {
+      "id": 9,
+      "title": "Luca",
+      "genre": "Animation",
+      "releaseYear": 2021,
+      "summary": "On the Italian Riviera, an unlikely but strong friendship grows between a human being and a sea monster disguised as a human."
     }
   ]
 }
