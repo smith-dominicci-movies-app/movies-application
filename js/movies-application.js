@@ -8,7 +8,7 @@ const createMovieCard = (movie) => {
 	header.classList.add('card-header');
 	header.innerHTML = `
 	<div class="options-dropdown">
-    <button class="options-button" onclick="toggleOptionsDropdown(e, ${movie.id})">...</button>
+    <button class="options-button" onclick="toggleOptionsDropdown(event, ${movie.id})">...</button>
     <div class="options-content" id="options-content-${movie.id}">
         <a href="#" onclick="showEditPopup(${movie.id})">
             <img src="../img/pencil.png" alt="Edit Icon" width="20" height="20">Edit Movie
