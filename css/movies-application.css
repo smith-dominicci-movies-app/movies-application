@@ -1,19 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Port+Lligat+Sans&display=swap');
+
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: auto;
-    margin: 0;
+}
+
+header {
+    color: #4caf50;
+    padding: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Search Bar Styles */
+#search-bar {
+    margin-right: 10px;
+    padding: 8px;
+}
+
+/* Filter Button Styles */
+#filter-btn {
+    background-color: #8A9099;
+    color: #fff;
+}
+
+/* Add Movie Button Styles */
+#add-movie-btn {
+    color: #fff;
+}
+
+.genre-button {
+    background-color: #8A9099;
+    color: #fff;
+    margin: 0 5px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
 }
 
 #movies-container {
     display: flex;
     flex-wrap: wrap;
-
 }
+
+/* Rest of your CSS */
+
 /* Movie Card Styles */
 .movie-card {
     font-family: 'Poppins', sans-serif;
@@ -37,13 +83,13 @@ body {
 }
 
 .card-title {
-    font-weight:  500; /*Medium 500*/
+    font-weight:  500;
     font-size: 18px;
 }
 
 .card-year {
     font-size: 14px;
-    font-weight: 400; /*Regular 400*/
+    font-weight: 400;
     color: #595F69;
 }
 
@@ -63,24 +109,27 @@ body {
     border-radius: 10px;
     overflow: hidden;
     margin-top: 8px;
-    & label {
-    }
-    .rating-value {
-        height: 100%;
-        background-color: #4caf50;
-        border-radius: 10px;
-    }
+}
+
+.rating-bar label {
+}
+
+.rating-bar .rating-value {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
 }
 
 /* Card Footer Styles */
 .card-footer {
-
     font-size: 14px;
     color: #555;
 }
+
 .card-footer label {
-    margin-right: 10px; /* Adjust the margin as needed */
+    margin-right: 10px;
 }
+
 .card-genres {
     font-size: 14px;
     font-weight: 400;
@@ -91,7 +140,7 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 15px 106px;
+    margin: 15px 0; /* Adjusted margin */
     border-radius: 6px;
 }
 
@@ -103,10 +152,12 @@ body {
     cursor: pointer;
     color: #8A9099;
 }
+
 .right-aligned {
     right: 0;
     left: auto;
 }
+
 .popup {
     display: none;
     position: fixed;
@@ -131,40 +182,48 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+
 .options-dropdown {
     position: relative;
     display: inline-block;
 }
+
 .options-content {
     display: none;
     position: absolute;
     min-height: 123px;
     min-width: 224px;
-    left: -195px; /* Adjust this value as needed */
-    top: 45px; /* Position it below the button */
+    left: -195px;
+    top: 45px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
+
 .options-button {
     margin-top: -10px;
 }
+
 .options-content a:hover {
     background-color: #808080FF;
 }
+
 .options-divider {
     height: 1px;
     background-color: #ccc;
     margin: 5px 0;
 }
+
 .options-dropdown {
     position: relative;
 }
+
 .options-button.active {
-    background-color: grey; /* Adjust the background color for the active state */
+    background-color: grey;
 }
+
 .options-button.active + .options-content {
     display: block;
 }
