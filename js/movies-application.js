@@ -44,6 +44,7 @@ const createMovieCard = (movie) => {
 	body.classList.add('card-body');
 
 	const description = document.createElement('div');
+	description.classList.add("desc");
 	description.textContent = movie.description;
 
 	body.appendChild(description);
@@ -52,19 +53,29 @@ const createMovieCard = (movie) => {
 	// Footer: Genres
 	const footer = document.createElement('div');
 	footer.classList.add('card-footer');
-	footer.innerHTML = `<label>Rating</label>  <label>${movie.rating}/10</label>`
+	footer.innerHTML = `
+		<div class="rating-split">
+			<label>Rating</label>
+			<label>${movie.rating}/10</label>
+		</div>
+	`;
 
+	const genresContainer = document.createElement('div');
+	genresContainer.classList.add('card-genres-container');
+
+	movie.genres.forEach(genre => {
+		const genreBox = document.createElement('div');
+		genreBox.classList.add('card-genres');
+		genreBox.textContent = genre;
+		genresContainer.appendChild(genreBox);
+	});
 
 	const ratingBar = document.createElement('div');
 	ratingBar.classList.add('rating-bar');
 	ratingBar.innerHTML = `<div class="rating-value" style="width: ${(movie.rating / 10) * 100}%;"></div>`;
 
-	const genres = document.createElement('div');
-	genres.classList.add('card-genres');
-	genres.textContent = `${movie.genre}`;
-
 	footer.appendChild(ratingBar);
-	footer.appendChild(genres);
+	footer.appendChild(genresContainer);
 
 	// Append everything to the card
 	card.appendChild(header);
@@ -112,21 +123,32 @@ const fetchMovies = () => {
 		.catch(error => console.error('Error fetching movies:', error));
 };
 
-const showEditPopup = (movieId) => {
+const showEditPopup = async (movieId) => {
 	const editPopup = document.getElementById('edit-popup');
-	const movie = `${movie.id}`;
 
-		// Pre-fill input fields
-		document.getElementById('edit-title').value = movie.title;
-	// Add similar lines for other movie properties
+	// Fetch the movie details using the movieId
+	try {
+		const response = await fetch(`http://localhost:3000/movies/${movieId}`);
+		if (response.ok) {
+			const movie = await response.json();
 
-	editPopup.style.display = 'block';
+			// Pre-fill input fields
+			document.getElementById('edit-title').value = movie.title;
+			// Add similar lines for other movie properties
+
+			editPopup.style.display = 'block';
+		} else {
+			console.error('Failed to fetch movie details:', response.status);
+		}
+	} catch (error) {
+		console.error('Error fetching movie details:', error);
+	}
 };
 
 function closeEditPopup() {
 	const editPopup = document.getElementById('edit-popup');
 	editPopup.style.display = 'none';
-};
+}
 
 const updateMovie = async () => {
 	const editPopup = document.getElementById('edit-popup');

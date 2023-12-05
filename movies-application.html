@@ -8,6 +8,7 @@
 </head>
 <body>
 <header>
+
     <h1 style="color: #4caf50;">Movies App</h1>
     <nav>
         <button id="all-movies-btn" class="genre-button" onclick="filterByGenre('All')">All</button>
@@ -27,20 +28,31 @@
     </div>
 
 
+
 </header>
 
 <div id="loading-message">Loading...</div>
 <div id="movies-container"></div>
 <div id="edit-popup" class="popup">
-    <div class="popup-content">
-        <span class="close" onclick="closeEditPopup()">&times;</span>
-        <h2>Edit Movie</h2>
-        <label for="edit-title">Title:</label>
-        <input type="text" id="edit-title" name="edit-title">
-        <!-- Add similar input fields for other movie properties -->
-        <button onclick="updateMovie()">Update</button>
-    </div>
+
+	<div class="popup-content">
+		<span class="close" onclick="closeEditPopup()">&times;</span>
+		<h2>Edit Movie</h2>
+		<label for="edit-title">Title:</label>
+		<input type="text" id="edit-title" name="edit-title">
+		<!-- Add similar input fields for other movie properties -->
+		<button onclick="updateMovie()">Update</button>
+	</div>
+
+	<div class="search-container">
+		<button class="search-icon">&#128269;</button>
+		<input type="text" id="search-bar" placeholder="Search...">
+		<button class="filter-button" onclick="filterMovies()"><img src="img/filter.png" alt="Filter Icon"></button>
+		<button class="add-movie-button" onclick="openAddMoviePopup()">+ Add Movie</button>
+	</div>
 </div>
+
+
 
 <script src="./js/movies-application.js"></script>
 
