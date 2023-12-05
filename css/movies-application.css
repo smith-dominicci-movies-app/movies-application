@@ -1,5 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Port+Lligat+Sans&display=swap');
 
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+header {
+    color: #4caf50;
+    padding: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.genre-button {
+    background-color: #8A9099;
+    color: #fff;
+    margin: 0 5px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+#movies-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Rest of your CSS */
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -58,7 +108,6 @@ nav {
     flex-wrap: wrap;
 }
 
-/* Rest of your CSS */
 
 /* Movie Card Styles */
 .movie-card {
@@ -66,11 +115,17 @@ nav {
     border: 1px solid #ddd;
     border-radius: 8px;
     margin: 15px;
-    padding: 25px 20px;
+    padding: 25px 25px 5px;
     width: 330px;
     height: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+}
+
+.rating-split {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Card Header Styles */
@@ -83,8 +138,9 @@ nav {
 }
 
 .card-title {
-    font-weight:  500;
-    font-size: 18px;
+    font-weight:  500; /*Medium 500*/
+    font-size: 20px;
+
 }
 
 .card-year {
@@ -98,16 +154,20 @@ nav {
     font-family: 'Port Lligat Sans', sans-serif;
     font-weight: 400;
     color: #595F69;
-    margin: 10px;
+    margin-bottom: 30px;
+    height: 52px;
+    overflow: hidden;
+
 }
 
 /* Rating Bar Styles */
 .rating-bar {
     position: relative;
-    height: 10px;
+    height: 5px;
     background-color: #ddd;
     border-radius: 10px;
     overflow: hidden;
+
     margin-top: 8px;
 }
 
@@ -118,6 +178,7 @@ nav {
     height: 100%;
     background-color: #4caf50;
     border-radius: 10px;
+
 }
 
 /* Card Footer Styles */
@@ -126,9 +187,11 @@ nav {
     color: #555;
 }
 
+
 .card-footer label {
     margin-right: 10px;
 }
+
 
 .card-genres {
     font-size: 14px;
@@ -136,13 +199,21 @@ nav {
     background-color: #F8F8F8;
     border: none;
     color: black;
-    padding: 3px 38px;
+
+    padding: 3px 35px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 15px 0; /* Adjusted margin */
+
+    margin: 10px 5px;
+
     border-radius: 6px;
 }
+.card-genres-container {
+    display: flex;
+    gap: 5px; /* Adjust the gap between the two pill boxes */
+}
+
 
 /* Options Button Styles */
 .options-button {
@@ -195,26 +266,41 @@ nav {
     min-width: 224px;
     left: -195px;
     top: 45px;
+
+
+   
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    text-align: center;
 }
 
+
 .options-button {
-    margin-top: -10px;
+    margin-top: 2px;
+}
+.options-content a {
+    display: block;
+    padding: 10px; /* Add padding for better spacing */
+    text-decoration: none;
+    color: #555;
 }
 
 .options-content a:hover {
-    background-color: #808080FF;
+    background-color: #808080; /* Change the color when hovering */
+    border-radius: 4px; /* Add rounded corners */
+    color: #fff; /* Change text color on hover */
 }
 
 .options-divider {
     height: 1px;
     background-color: #ccc;
-    margin: 5px 0;
+    margin: 10px 0; /* Adjust the margin */
 }
+
+
 
 .options-dropdown {
     position: relative;
@@ -227,6 +313,70 @@ nav {
 .options-button.active + .options-content {
     display: block;
 }
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.search-icon {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+#search-bar {
+    flex: 1;
+    padding: 8px;
+}
+
+.filter-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.filter-button img {
+    width: 20px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+}
+
+.add-movie-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+.search-icon,
+.filter-button,
+.add-movie-button,
+.genre-button {
+    border-radius: 5px; /* Adjust the border-radius as needed */
+}
+
+/* Add this for the search bar input */
+#search-bar {
+    border-radius: 5px; /* Adjust the border-radius as needed */
+}
+
+
+.options-dropdown {
+    position: relative;
+}
+
+.options-button.active {
+    background-color: grey;
+}
+
+.options-button.active + .options-content {
+    display: block;
+}
+
 
 /* Update the styles to position the search icon before the search bar */
 .search-container {
@@ -280,6 +430,7 @@ nav {
 #search-bar {
     border-radius: 5px; /* Adjust the border-radius as needed */
 }
+
 
 
 

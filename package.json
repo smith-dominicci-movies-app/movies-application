@@ -1,5 +1,15 @@
 {
+  "name": "movies-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/movies-application.js",
   "scripts": {
-    "db": "json-server -d1200 --watch data/movies.json"
+    "start": "json-server --watch data/movies.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.4"
   }
 }
