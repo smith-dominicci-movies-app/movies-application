@@ -1,18 +1,21 @@
 {
   "movies": [
     {
-      "id": 1,
       "title": "Inception",
-      "rating": 9,
-      "genres": ["Sci-Fi", "Thriller"],
+      "year": "2010",
       "description": "A skilled thief enters the dreams of others to steal their deepest secrets.",
-      "year": 2010
+      "rating": "9",
+      "id": 1,
+      "genres": ["Sci-Fi", "Action"]
     },
     {
       "id": 2,
       "title": "The Shawshank Redemption",
       "rating": 10,
-      "genres": ["Drama", "Crime"],
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
       "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
       "year": 1994
     },
@@ -20,7 +23,10 @@
       "id": 3,
       "title": "The Dark Knight",
       "rating": 9.6,
-      "genres": ["Action", "Drama"],
+      "genres": [
+        "Action",
+        "Drama"
+      ],
       "description": "Batman, with the help of his allies and Gotham's police, tries to rid the city of crime.",
       "year": 2008
     },
@@ -28,7 +34,10 @@
       "id": 4,
       "title": "Forrest Gump",
       "rating": 9.4,
-      "genres": ["Drama", "Romance"],
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
       "description": "The story depicts several decades in the life of Forrest Gump, a slow-witted but kind-hearted and athletically-talented man.",
       "year": 1994
     },
@@ -36,7 +45,10 @@
       "id": 5,
       "title": "Pulp Fiction",
       "rating": 9.2,
-      "genres": ["Crime", "Comedy"],
+      "genres": [
+        "Crime",
+        "Comedy"
+      ],
       "description": "Various interconnected stories of crime and redemption in Los Angeles.",
       "year": 1994
     },
@@ -44,7 +56,10 @@
       "id": 6,
       "title": "The Matrix",
       "rating": 9.8,
-      "genres": ["Sci-Fi", "Action"],
+      "genres": [
+        "Sci-Fi",
+        "Action"
+      ],
       "description": "A computer hacker learns about the true nature of his reality and his role in the war against its controllers.",
       "year": 1999
     },
@@ -52,7 +67,10 @@
       "id": 7,
       "title": "Titanic",
       "rating": 8.8,
-      "genres": ["Romance", "Drama"],
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
       "description": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
       "year": 1997
     },
@@ -60,7 +78,10 @@
       "id": 8,
       "title": "The Godfather",
       "rating": 9.6,
-      "genres": ["Crime", "Thriller"],
+      "genres": [
+        "Crime",
+        "Thriller"
+      ],
       "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
       "year": 1972
     },
@@ -68,14 +89,172 @@
       "id": 9,
       "title": "Jurassic Park",
       "rating": 9,
-      "genres": ["Adventure", "Sci-Fi"],
+      "genres": [
+        "Adventure",
+        "Sci-Fi"
+      ],
       "description": "A pragmatic paleontologist visiting an almost complete theme park is tasked with protecting a couple of kids after a power failure causes the park's cloned dinosaurs to run loose.",
       "year": 1993
     },
     {
-      "title": "Mark",
-      "rating": 6,
-      "id": 10
+      "id": 10,
+      "title": "Inglourious Basterds",
+      "rating": 8.3,
+      "genres": ["Drama", "War"],
+      "description": "In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same.",
+      "year": 2009
+    },
+    {
+      "id": 11,
+      "title": "Fight Club",
+      "rating": 8.8,
+      "genres": ["Drama", "Thriller"],
+      "description": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
+      "year": 1999
+    },
+    {
+      "id": 12,
+      "title": "The Silence of the Lambs",
+      "rating": 8.6,
+      "genres": ["Crime", "Thriller"],
+      "description": "A young FBI cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
+      "year": 1991
+    },
+    {
+      "id": 13,
+      "title": "The Departed",
+      "rating": 8.5,
+      "genres": ["Crime", "Drama"],
+      "description": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
+      "year": 2006
+    },
+    {
+      "id": 14,
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "rating": 8.8,
+      "genres": ["Adventure", "Fantasy"],
+      "description": "A young hobbit, Frodo Baggins, and his companions set out on a quest to destroy the One Ring and prevent the dark lord Sauron from conquering the world.",
+      "year": 2001
+    },
+    {
+      "id": 15,
+      "title": "Gladiator",
+      "rating": 8.5,
+      "genres": ["Action", "Drama"],
+      "description": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+      "year": 2000
+    },
+    {
+      "id": 16,
+      "title": "The Usual Suspects",
+      "rating": 8.5,
+      "genres": ["Crime", "Thriller"],
+      "description": "A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which began when five criminals met at a seemingly random police lineup.",
+      "year": 1995
+    },
+    {
+      "id": 17,
+      "title": "The Social Network",
+      "rating": 7.7,
+      "genres": ["Biography", "Drama"],
+      "description": "As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea.",
+      "year": 2010
+    },
+    {
+      "id": 18,
+      "title": "Schindler's List",
+      "rating": 8.9,
+      "genres": ["Biography", "History"],
+      "description": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+      "year": 1993
+    },
+    {
+      "id": 19,
+      "title": "The Pianist",
+      "rating": 8.5,
+      "genres": ["Biography", "Music"],
+      "description": "A Polish Jewish musician struggles to survive the destruction of the Warsaw ghetto of World War II.",
+      "year": 2002
+    },
+    {
+      "id": 20,
+      "title": "The Bourne Identity",
+      "rating": 7.9,
+      "genres": ["Action", "Thriller"],
+      "description": "A man is picked up by a fishing boat, bullet-riddled and without memory, then races to elude assassins and recover from amnesia.",
+      "year": 2002
+    },
+    {
+      "id": 21,
+      "title": "Inception",
+      "rating": 8.8,
+      "genres": ["Sci-Fi", "Action"],
+      "description": "A skilled thief enters the dreams of others to steal their deepest secrets.",
+      "year": 2010
+    },
+    {
+      "id": 22,
+      "title": "Casablanca",
+      "rating": 8.5,
+      "genres": ["Drama", "Romance"],
+      "description": "A cynical expatriate American cafe owner struggles to decide whether to help his former lover and her fugitive husband escape the Nazis in French Morocco.",
+      "year": 1942
+    },
+    {
+      "id": 23,
+      "title": "The Shining",
+      "rating": 8.4,
+      "genres": ["Horror", "Drama"],
+      "description": "A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings from both past and future.",
+      "year": 1980
+    },
+    {
+      "id": 24,
+      "title": "The Terminator",
+      "rating": 8.0,
+      "genres": ["Action", "Sci-Fi"],
+      "description": "A human soldier is sent from 2029 to 1984 to stop an almost indestructible cyborg killing machine, sent from the same year, which has been programmed to execute a young woman whose unborn son is the key to humanity's future salvation.",
+      "year": 1984
+    },
+    {
+      "id": 25,
+      "title": "The Grand Budapest Hotel",
+      "rating": 8.1,
+      "genres": ["Adventure", "Comedy"],
+      "description": "A quirky hotel concierge and his protégé team up to prove their innocence after the latter is framed for murder.",
+      "year": 2014
+    },
+    {
+      "id": 26,
+      "title": "Eternal Sunshine of the Spotless Mind",
+      "rating": 8.3,
+      "genres": ["Drama", "Romance"],
+      "description": "When their relationship turns sour, a couple undergoes a medical procedure to have each other erased from their memories.",
+      "year": 2004
+    },
+    {
+      "id": 27,
+      "title": "The Sixth Sense",
+      "rating": 8.1,
+      "genres": ["Drama", "Mystery"],
+      "description": "A boy who communicates with spirits seeks the help of a disheartened child psychologist.",
+      "year": 1999
+    },
+    {
+      "id": 28,
+      "title": "The Revenant",
+      "rating": 8.0,
+      "genres": ["Action", "Adventure"],
+      "description": "A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.",
+      "year": 2015
+    },
+    {
+      "id": 29,
+      "title": "The Prestige",
+      "rating": 8.5,
+      "genres": ["Drama", "Mystery"],
+      "description": "After a tragic accident, two stage magicians engage in a battle to create the ultimate illusion while sacrificing everything they have to outwit each other.",
+      "year": 2006
     }
   ]
 }

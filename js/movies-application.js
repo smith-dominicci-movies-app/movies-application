@@ -11,8 +11,8 @@ const createMovieCard = (movie) => {
     <button class="options-button" onclick="toggleOptionsDropdown(event, ${movie.id})">...</button>
     <div class="options-content" id="options-content-${movie.id}">
         <a href="#" onclick="showEditPopup(${movie.id})">
-            <img src="../img/pencil.png" alt="Edit Icon" width="20" height="20">Edit Movie
-        </a>
+    <img src="../img/pencil.png" alt="Edit Icon" width="20" height="20">Edit Movie
+</a>
         <div class="options-divider"></div> <!-- Divider -->
         <a href="#" onclick="deleteMovie(${movie.id})">
             <img src="../img/trash.png" alt="Delete Icon" width="20" height="20">Delete Movie
@@ -54,28 +54,31 @@ const createMovieCard = (movie) => {
 	const footer = document.createElement('div');
 	footer.classList.add('card-footer');
 	footer.innerHTML = `
-		<div class="rating-split">
-			<label>Rating</label>
-			<label>${movie.rating}/10</label>
-		</div>
-	`;
-
-	const genresContainer = document.createElement('div');
-	genresContainer.classList.add('card-genres-container');
-
-	movie.genres.forEach(genre => {
-		const genreBox = document.createElement('div');
-		genreBox.classList.add('card-genres');
-		genreBox.textContent = genre;
-		genresContainer.appendChild(genreBox);
-	});
-
+        <div class="rating-split">
+            <label>Rating</label>
+            <label>${movie.rating}/10</label>
+        </div>
+    `;
 	const ratingBar = document.createElement('div');
 	ratingBar.classList.add('rating-bar');
 	ratingBar.innerHTML = `<div class="rating-value" style="width: ${(movie.rating / 10) * 100}%;"></div>`;
 
 	footer.appendChild(ratingBar);
-	footer.appendChild(genresContainer);
+
+	if (movie.genres) {
+		const genresContainer = document.createElement('div');
+		genresContainer.classList.add('card-genres-container');
+
+		movie.genres.forEach(genre => {
+
+			const genreBox = document.createElement('div');
+			genreBox.classList.add('card-genres');
+			genreBox.textContent = genre;
+			genresContainer.appendChild(genreBox);
+		});
+
+		footer.appendChild(genresContainer);
+	}
 
 	// Append everything to the card
 	card.appendChild(header);
@@ -100,7 +103,6 @@ const deleteMovie = async (movieId) => {
 			method: 'DELETE',
 		});
 		if (response.ok) {
-			const deletedMovie = await response.json();
 			fetchMovies();
 		} else {
 			console.error('Failed to delete movie:', response.status);
@@ -126,14 +128,19 @@ const fetchMovies = () => {
 const showEditPopup = async (movieId) => {
 	const editPopup = document.getElementById('edit-popup');
 
-	// Fetch the movie details using the movieId
 	try {
+		// Fetch the movie details using the movieId
 		const response = await fetch(`http://localhost:3000/movies/${movieId}`);
+
 		if (response.ok) {
-			const movie = await response.json();
+			const movieDetails = await response.json();
 
 			// Pre-fill input fields
-			document.getElementById('edit-title').value = movie.title;
+			document.getElementById('edit-movie-id').value = movieDetails.id;
+			document.getElementById('edit-title').value = movieDetails.title;
+			document.getElementById('edit-year').value = movieDetails.year;
+			document.getElementById('edit-description').value = movieDetails.description;
+			document.getElementById('edit-rating').value = movieDetails.rating;
 			// Add similar lines for other movie properties
 
 			editPopup.style.display = 'block';
@@ -145,18 +152,21 @@ const showEditPopup = async (movieId) => {
 	}
 };
 
+
 function closeEditPopup() {
 	const editPopup = document.getElementById('edit-popup');
 	editPopup.style.display = 'none';
 }
 
 const updateMovie = async () => {
-	const editPopup = document.getElementById('edit-popup');
-	const movieId = movie.id; // Get the current movie id
-	const updatedTitle = document.getElementById('edit-title').value;
-	// Get values for other input fields
-
 	try {
+		const editPopup = document.getElementById('edit-popup');
+		const movieId = document.getElementById('edit-movie-id').value; // Get the movie ID from an input field
+		const updatedTitle = document.getElementById('edit-title').value;
+		const updatedYear = document.getElementById('edit-year').value;
+		const updatedDescription = document.getElementById('edit-description').value;
+		const updatedRating = document.getElementById('edit-rating').value;
+
 		const response = await fetch(`http://localhost:3000/movies/${movieId}`, {
 			method: 'PUT',
 			headers: {
@@ -164,6 +174,9 @@ const updateMovie = async () => {
 			},
 			body: JSON.stringify({
 				title: updatedTitle,
+				year: updatedYear,
+				description: updatedDescription,
+				rating: updatedRating,
 				// Include other movie properties in the body
 			}),
 		});
@@ -179,6 +192,7 @@ const updateMovie = async () => {
 		console.error('Error updating movie:', error);
 	}
 };
+
 
 const toggleOptionsDropdown = (event, movieId) => {
 	event.stopPropagation();
