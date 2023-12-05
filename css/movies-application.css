@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Port+Lligat+Sans&display=swap');
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -48,21 +49,65 @@ nav {
 /* Rest of your CSS */
 
 
+
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: auto;
-    margin: 0;
+}
+
+header {
+    color: #4caf50;
+    padding: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Search Bar Styles */
+#search-bar {
+    margin-right: 10px;
+    padding: 8px;
+}
+
+/* Filter Button Styles */
+#filter-btn {
+    background-color: #8A9099;
+    color: #fff;
+}
+
+/* Add Movie Button Styles */
+#add-movie-btn {
+    color: #fff;
+}
+
+.genre-button {
+    background-color: #8A9099;
+    color: #fff;
+    margin: 0 5px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
 }
 
 #movies-container {
     display: flex;
     flex-wrap: wrap;
-
 }
+
 
 /* Movie Card Styles */
 .movie-card {
@@ -93,14 +138,14 @@ body {
 }
 
 .card-title {
-
     font-weight:  500; /*Medium 500*/
     font-size: 20px;
+
 }
 
 .card-year {
     font-size: 14px;
-    font-weight: 400; /*Regular 400*/
+    font-weight: 400;
     color: #595F69;
 }
 
@@ -122,15 +167,17 @@ body {
     background-color: #ddd;
     border-radius: 10px;
     overflow: hidden;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    & label {
-    }
-    .rating-value {
-        height: 100%;
-        background-color: #4caf50;
-        border-radius: 10px;
-    }
+
+    margin-top: 8px;
+}
+
+.rating-bar label {
+}
+
+.rating-bar .rating-value {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
 
 }
 
@@ -157,7 +204,9 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+
     margin: 10px 5px;
+
     border-radius: 6px;
 }
 .card-genres-container {
@@ -215,10 +264,11 @@ body {
     position: absolute;
     min-height: 123px;
     min-width: 224px;
+    left: -195px;
+    top: 45px;
 
-    left: -195px; /* Adjust this value as needed */
-    top: 45px; /* Position it below the button */
 
+   
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -226,8 +276,6 @@ body {
     z-index: 1;
     text-align: center;
 }
-
-
 
 
 .options-button {
@@ -239,6 +287,7 @@ body {
     text-decoration: none;
     color: #555;
 }
+
 .options-content a:hover {
     background-color: #808080; /* Change the color when hovering */
     border-radius: 4px; /* Add rounded corners */
@@ -250,6 +299,7 @@ body {
     background-color: #ccc;
     margin: 10px 0; /* Adjust the margin */
 }
+
 
 
 .options-dropdown {
@@ -314,13 +364,74 @@ body {
     border-radius: 5px; /* Adjust the border-radius as needed */
 }
 
+
 .options-dropdown {
     position: relative;
 }
+
 .options-button.active {
-    background-color: grey; /* Adjust the background color for the active state */
+    background-color: grey;
 }
+
 .options-button.active + .options-content {
     display: block;
 }
+
+
+/* Update the styles to position the search icon before the search bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.search-icon {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+#search-bar {
+    flex: 1;
+    padding: 8px;
+}
+
+.filter-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.filter-button img {
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+}
+
+.add-movie-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.search-icon,
+.filter-button,
+.add-movie-button,
+.genre-button {
+    border-radius: 5px; /* Adjust the border-radius as needed */
+}
+
+/* Add this for the search bar input */
+#search-bar {
+    border-radius: 5px; /* Adjust the border-radius as needed */
+}
+
+
+
+
 
