@@ -220,6 +220,52 @@ const searchMovies = async (query) => {
 		console.error('Error searching movies:', error);
 	}
 };
+// ... your existing JavaScript code ...
+
+const openAddMoviePopup = () => {
+	const addMoviePopup = document.getElementById('add-movie-popup');
+	addMoviePopup.style.display = 'block';
+};
+
+const closeAddMoviePopup = () => {
+	const addMoviePopup = document.getElementById('add-movie-popup');
+	addMoviePopup.style.display = 'none';
+};
+
+const addMovie = async () => {
+	const addMovieForm = document.getElementById('add-movie-form');
+	const title = document.getElementById('add-title').value;
+	const rating = parseFloat(document.getElementById('add-rating').value);
+
+	// You can get values for other input fields here
+
+	try {
+		const response = await fetch('http://localhost:3000/movies', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				title: title,
+				rating: rating,
+				// Include other movie properties in the body
+			}),
+		});
+
+		if (response.ok) {
+			const newMovie = await response.json();
+			closeAddMoviePopup();
+			fetchMovies(); // Refresh movie list
+		} else {
+			console.error('Failed to add movie:', response.status);
+		}
+	} catch (error) {
+		console.error('Error adding movie:', error);
+	}
+};
+
+// ... rest of your JavaScript code ...
+
 
 
 
