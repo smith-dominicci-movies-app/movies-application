@@ -170,10 +170,35 @@ document.addEventListener('click', () => {
 		content.style.display = 'none';
 	});
 });
+//Searchbar function
+const searchMovies = async (query) => {
+	try {
+		const response = await fetch(`http://localhost:3000/movies?q=${query}`);
+		if (response.ok) {
+			const data = await response.json();
+			displayMovies(data);
+		} else {
+			console.error('Failed to search movies:', response.status);
+		}
+	} catch (error) {
+		console.error('Error searching movies:', error);
+	}
+};
+
+
+
 
 // Immediately Invoked Function Expression (IIFE)
 (function () {
 	document.addEventListener('DOMContentLoaded', () => {
 		fetchMovies();
 	});
+	///For searchbar
+	document.getElementById('search-bar').addEventListener('input', (event) => {
+		const searchTerm = event.target.value.trim();
+		searchMovies(searchTerm);
+	});
+
+
+
 })();
